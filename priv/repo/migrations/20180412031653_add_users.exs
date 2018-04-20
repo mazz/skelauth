@@ -13,6 +13,7 @@ defmodule Skelauth.Repo.Migrations.AddUsers do
       add :password_reset_key, :string
       add :password_reset_expire, :integer
       add :confirmed, :boolean
+      add :admin, :boolean, default: false
   		timestamps
   	end
     create unique_index(:users, [:email])
